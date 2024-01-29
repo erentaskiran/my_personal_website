@@ -39,7 +39,7 @@ export default async function Home() {
           <h1 className="text-3xl flex justify-center mt-6">Latest blog</h1>
         </div>
         <div className="mt-10">
-          <Link href={`https://storage.googleapis.com/my-site-92f1a.appspot.com/images/${blog.slug}.jpg`} className='flex justify-center'>
+          <Link href={`/blog/${blog.slug}`} className='flex justify-center'>
             <BlogCard
               image={`https://storage.googleapis.com/my-site-92f1a.appspot.com/images/${blog.slug}.jpg`}
               date={blog.date}
