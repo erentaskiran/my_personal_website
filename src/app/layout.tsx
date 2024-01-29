@@ -20,12 +20,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='max-w-sm mx-auto md:max-w-2xl lg:max-w-5xl'>
-          <nav className='mx-auto max-w-fit border-2 border-black px-4 py-2 rounded-full'>
+        <div className='max-w-sm mx-auto md:max-w-2xl lg:max-w-5xl mt-5'>
+          <nav className='flex items-center justify-between gap-4'>
             {pages.map((page) => (
-              <Link href={page.slug}>{page.title}</Link>
+              <Link className='relative block cursor-pointer px-2 py-1 rounded-lg hover:bg-zinc-100' href={page.slug}>{page.title}</Link>
             ))}
           </nav>
+          <hr className='mt-5 mb-10'/>
           {children}
         </div>
       </body>

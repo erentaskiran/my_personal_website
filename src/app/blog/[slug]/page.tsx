@@ -1,4 +1,4 @@
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from 'react-markdown';
 
 async function getBlogs(slug: string) {
   const blogs = await fetch(`http://localhost:3000/api/blog/${slug}`);
@@ -12,7 +12,7 @@ export default async function Slug({ params }: { params: { slug: string } }) {
     <main>
       <div className="flex justify-center">
         <article className="prose lg:prose-xl">
-        <ReactMarkdown>{blogRes.blog}</ReactMarkdown>
+          <ReactMarkdown>{blogRes.blog}</ReactMarkdown>
         </article>
       </div>
       Blog
